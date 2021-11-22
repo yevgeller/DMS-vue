@@ -3,7 +3,7 @@
         <div v-if="loading" class="loading">
             Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationvue">https://aka.ms/jspsintegrationvue</a> for more details.
         </div>
-
+        <div>Tutorial <a href="https://docs.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-vue?view=vs-2022">here.</a></div>
         <div v-if="post" class="content">
             <table>
                 <thead>
