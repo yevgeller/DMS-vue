@@ -5,7 +5,7 @@
         </div>
         <div>Tutorial <a href="https://docs.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-vue?view=vs-2022">here.</a></div>
         <div v-if="post" class="content">
-            <table>
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Date</th>
@@ -16,7 +16,7 @@
                 </thead>
                 <tbody>
                     <tr v-for="forecast in post" :key="forecast.date">
-                        <td>{{ forecast.date }}</td>
+                        <td>{{ processDate(forecast.date) }}</td>
                         <td>{{ forecast.temperatureC }}</td>
                         <td>{{ forecast.temperatureF }}</td>
                         <td>{{ forecast.summary }}</td>
@@ -67,6 +67,10 @@
                         this.loading = false;
                         return;
                     });
+            },
+            processDate(d: Date): string {
+                const dd = new Date(d);
+                return dd.getDate() + "-" + (dd.getMonth() + 1) + "-" + dd.getFullYear();
             }
         },
     });
