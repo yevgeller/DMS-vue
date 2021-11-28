@@ -61,8 +61,9 @@
                 this.loading = true;
 
                 fetch('weatherforecast')
-                    .then(r => r.json())
+                    .then(r => { console.log(r); return r.json(); })
                     .then(json => {
+                        console.log(json);
                         this.post = json as Forecasts;
                         this.loading = false;
                         return;
