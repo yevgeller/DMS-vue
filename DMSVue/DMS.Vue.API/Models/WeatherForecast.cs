@@ -1,4 +1,4 @@
-namespace DMS.Vue.API
+namespace DMS.Vue.API.Models
 {
     public class WeatherForecast
     {

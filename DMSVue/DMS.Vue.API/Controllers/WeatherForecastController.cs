@@ -1,3 +1,4 @@
+using DMS.Vue.API.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DMS.Vue.API.Controllers
